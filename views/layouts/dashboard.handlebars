@@ -10,7 +10,7 @@
 	<body>
 
 		<nav>
-			<ul>
+			<ul> 
 				<li class='li-inline nav-item'><a href='/'>Home</a></li>
 				{{#if logged_in}}
 					<li class='li-inline nav-item'><a href='/dashboard'>Dashboard</a></li>
@@ -27,15 +27,16 @@
 
 		<header class='display-flex justify-space-between align-center p-2'>
 			<h1>
-				<a href='/'>Tech Blog</a>
+				Tech Blog
 			</h1>
 		</header>
 
 		<main>
 			{{{body}}}
 		</main>
+
 		<footer>
-			&copy; Tech Blog 2024
+			<a href='/dashboard/new'>Create New Post</a>
 		</footer>
 
 	</body>
