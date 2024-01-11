@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Exploring Asynchronous Programming in JavaScript",
+    "body": "This article dives into the world of asynchronous programming, exploring its benefits and techniques in JavaScript.",
+    "username": "StellarOctopus"
+  },
+  {
+    "title": "Crafting User-Friendly UI Components with Vue.js",
+    "body": "Discover how to create engaging and intuitive UI components using Vue.js, a powerful JavaScript framework.",
+    "username": "CuriousCoder"
+  },
+  {
+    "title": "Optimizing Database Performance with Indexes",
+    "body": "Learn how to strategically use indexes to improve database query speed and enhance application performance.",
+    "username": "DataWizard"
+  }
+]
