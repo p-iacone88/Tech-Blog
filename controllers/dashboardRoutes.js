@@ -2,29 +2,29 @@ const router = require('express').Router();
 const { Post } = require('../models/');
 const withAuth = require('../utils/auth');
 
-// GET all auth user's posts
+// GET all authorized user's posts
 router.get('/', withAuth, async (req, res) => {
     try {
-        // let's find user id and incl all their posts
+        // Find user id along with all posts
         const postData = await Post.findAll({
             where: {
                 userId: req.session.userId,
             },
         });
 
-        // Pass their posts to the view & render into all posts admin using dashboard layout:
+        // Pass user posts to the view then render into all posts
         const posts = postData.map((post) => post.get({
             plain: true
         }));
         res.render('allPostsAdmin', { layout: "dashboard", posts, });
         
     } catch (err) { // if withAuth fails...
-        // if user has no active posts, redirect to login page:
+        // If user has no active posts redirect to login
         res.redirect('login');
     }
 });
 
-// GET route w /new endpt, res.render for new post in layout of dashboard
+// GET route
 
 router.get('/new', withAuth, async (req, res) => {
     try {
@@ -34,7 +34,7 @@ router.get('/new', withAuth, async (req, res) => {
     }
 });
 
-// GET route w /edit/:id endpoint .. post.findByPk(req.params.id), then render into edit post with layout of dashboard
+// GET route
 
 router.get('/edit/:id', withAuth, async (req, res) => {
     try {
