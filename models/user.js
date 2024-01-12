@@ -22,8 +22,9 @@ User.init(
     },
     email: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       unique: true,
+      defaultValue: 'email@gmail.com',
       validate: {
         isEmail: true,
       },

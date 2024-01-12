@@ -15,6 +15,8 @@ const loginFormHandler = async (event) => {
       document.location.replace('/dashboard'); // go to dash after logging in
     } else {
       alert('Failed to log in');
+      const d = await response.json();
+      console.log(d);
     }
   }
 };

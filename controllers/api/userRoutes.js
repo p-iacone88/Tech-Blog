@@ -7,7 +7,7 @@ router.post('/', async (req, res) => {
   try {
     // Creating a new user with the provided username and password from the request body
     const userData = await User.create({
-      username: req.body.username,
+      name: req.body.username,
       password: req.body.password,
     });
     // Saving session information after successful user creation
@@ -19,6 +19,7 @@ router.post('/', async (req, res) => {
       res.json(userData);
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -28,7 +29,7 @@ router.post('/login', async (req, res) => {
     // Finding user with the provided username from request body
     const userData = await User.findOne({ 
       where: {
-        username: req.body.username,
+        name: req.body.username,
       },
     });
     // Checking if user exists 
@@ -57,6 +58,7 @@ router.post('/login', async (req, res) => {
     });
 
   } catch (err) {
+    console.log(err);
     res.status(400).json({ message: 'No user account found!' });
   }
 });
