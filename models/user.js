@@ -54,5 +54,5 @@ User.init(
     modelName: 'user',
   }
 );
-//export
+
 module.exports = User;

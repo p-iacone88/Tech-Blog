@@ -1,8 +1,8 @@
 :root {
-  --primary: #5aa4ba;
-  --secondary: #61b89e;
-  --tertiary: #668c8c;
-  --light-dark: #147a4c;
+  --primary: #FF9843;
+  --secondary: #FFDD95;
+  --tertiary: #86A7FC;
+  --light-dark: #f0f2f7;
   --dark: #19042663;
 }
 
@@ -15,7 +15,7 @@
 
 body {
   background-color: var(--primary);
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Georgia, serif;
   font-size: 15px;
   color: var(--dark);
   line-height: 1.5;
@@ -119,7 +119,6 @@ main {
   body {
     font-size: 18px;
   }
-
   nav {
     margin-right: 1em;
   }
@@ -129,7 +128,6 @@ main {
   body {
     font-size: 20px;
   }
-
   nav {
     margin-right: 1.5em;
   }
