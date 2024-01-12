@@ -1,6 +1,6 @@
 // Import necessary modules
-const sequelize = require('../config/connection'); // Import database connection configuration
-const { User, Post } = require('../models'); // Import User and Post models
+const sequelize = require('../config/connection.js'); // Import database connection configuration
+const { User, Post } = require('../models/index.js'); // Import User and Post models
 
 const userData = require('./userData.js'); // Import user data for seeding
 const postData = require('./postData.json'); // Import post data for seeding
